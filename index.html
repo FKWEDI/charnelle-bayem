@@ -67,39 +67,104 @@
     </div>
 </section>
 
-<!-- JavaScript intégré (plus besoin d'un fichier séparé) -->
+<!-- JavaScript intégré -->
 <script>
-let compteur = 0;
-
-function ajouterFleur() {
-    const zone = document.getElementById("fleurs-zone");
-    const img = document.createElement("img");
-
-    img.src = "rose.jpeg";
-    img.style.width = "60px";
-    img.style.margin = "8px";
-
-    zone.appendChild(img);
-
-    compteur++;
-    document.getElementById("compteur").textContent = "Fleurs offertes : " + compteur;
+// Charger les messages depuis l'API
+async function chargerMessages() {
+    try {
+        const response = await fetch('/api/messages');
+        const messages = await response.json();
+        const div = document.getElementById("messages");
+        div.innerHTML = '';
+        
+        messages.forEach(msg => {
+            const p = document.createElement("p");
+            p.style.background = "#ffecec";
+            p.style.padding = "10px";
+            p.style.borderRadius = "10px";
+            p.style.marginTop = "10px";
+            p.textContent = msg.texte;
+            div.appendChild(p);
+        });
+    } catch (error) {
+        console.error('Erreur lors du chargement des messages:', error);
+    }
 }
 
-function ajouterMessage() {
+// Charger les fleurs depuis l'API
+async function chargerFleurs() {
+    try {
+        const response = await fetch('/api/fleurs');
+        const fleurs = await response.json();
+        const zone = document.getElementById("fleurs-zone");
+        zone.innerHTML = '';
+        
+        fleurs.forEach(() => {
+            const img = document.createElement("img");
+            img.src = "rose.jpeg";
+            img.style.width = "60px";
+            img.style.margin = "8px";
+            zone.appendChild(img);
+        });
+        
+        document.getElementById("compteur").textContent = "Fleurs offertes : " + fleurs.length;
+    } catch (error) {
+        console.error('Erreur lors du chargement des fleurs:', error);
+    }
+}
+
+// Ajouter un message
+async function ajouterMessage() {
     const txt = document.getElementById("message").value.trim();
     if (!txt) return;
 
-    const div = document.getElementById("messages");
-    const p = document.createElement("p");
-    p.style.background = "#ffecec";
-    p.style.padding = "10px";
-    p.style.borderRadius = "10px";
-    p.style.marginTop = "10px";
-    p.textContent = txt;
+    try {
+        const response = await fetch('/api/messages', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: txt })
+        });
 
-    div.appendChild(p);
-    document.getElementById("message").value = "";
+        if (response.ok) {
+            document.getElementById("message").value = "";
+            chargerMessages(); // Recharger les messages
+        } else {
+            alert('Erreur lors de l\'envoi du message');
+        }
+    } catch (error) {
+        console.error('Erreur:', error);
+        alert('Erreur lors de l\'envoi du message');
+    }
 }
+
+// Ajouter une fleur
+async function ajouterFleur() {
+    try {
+        const response = await fetch('/api/fleurs', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            chargerFleurs(); // Recharger les fleurs
+        } else {
+            alert('Erreur lors du dépôt de la fleur');
+        }
+    } catch (error) {
+        console.error('Erreur:', error);
+        alert('Erreur lors du dépôt de la fleur');
+    }
+}
+
+// Charger les données au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    chargerMessages();
+    chargerFleurs();
+});
 </script>
 
 </body>
