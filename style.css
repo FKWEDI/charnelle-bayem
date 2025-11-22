@@ -25,6 +25,48 @@ nav a {
     color: #aa6a6a;
 }
 
+/* Styles pour le lecteur audio */
+.audio-player-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 240, 240, 0.6);
+    border-bottom: 2px solid #e6bcbc;
+}
+
+.audio-player {
+    max-width: 600px;
+    width: 90%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.audio-player h3 {
+    color: #a45050;
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+}
+
+.audio-player audio {
+    width: 100%;
+    max-width: 550px;
+    outline: none;
+}
+
+.audio-player audio::-webkit-media-controls-panel {
+    background-color: #ffcccc;
+}
+
+.audio-player audio::-webkit-media-controls-play-button,
+.audio-player audio::-webkit-media-controls-timeline,
+.audio-player audio::-webkit-media-controls-current-time-display,
+.audio-player audio::-webkit-media-controls-time-remaining-display {
+    filter: invert(20%);
+}
+
 .section {
     width: 85%;
     max-width: 900px;
@@ -72,4 +114,72 @@ button {
     border-radius: 15px;
     margin-top: 20px;
     border: 5px solid #e6bcbc;
+}
+
+/* Styles pour l'accordéon des cantiques */
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border: 1px solid #e6bcbc;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px 20px;
+    background: #ffcccc;
+    color: #833;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: #ffb3b3;
+}
+
+.accordion-icon {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 20px;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 5000px;
+    padding: 20px;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.accordion-content strong {
+    color: #a45050;
+    font-weight: 600;
 }

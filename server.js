@@ -145,6 +145,12 @@ app.get('/plan-de-localisation.jpeg', (req, res) => {
     });
 });
 
+app.get('/jesus.mp3', (req, res) => {
+    res.sendFile(path.join(__dirname, 'jesus.mp3'), {
+        headers: { 'Content-Type': 'audio/mpeg' }
+    });
+});
+
 // Route pour servir index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
