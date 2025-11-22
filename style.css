@@ -73,3 +73,71 @@ button {
     margin-top: 20px;
     border: 5px solid #e6bcbc;
 }
+
+/* Styles pour l'accordéon des cantiques */
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border: 1px solid #e6bcbc;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px 20px;
+    background: #ffcccc;
+    color: #833;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: #ffb3b3;
+}
+
+.accordion-icon {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 20px;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 5000px;
+    padding: 20px;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.accordion-content strong {
+    color: #a45050;
+    font-weight: 600;
+}
