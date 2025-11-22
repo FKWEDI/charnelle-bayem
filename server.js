@@ -10,10 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Servir les fichiers statiques (doit être avant les routes)
-app.use(express.static(__dirname, {
-    index: false, // Ne pas servir index.html automatiquement
-    extensions: ['html', 'css', 'js', 'jpeg', 'jpg', 'png', 'gif', 'svg', 'ico']
-}));
+app.use(express.static(__dirname, { index: false }));
 
 // Chemins des fichiers de base de données
 // Sur Vercel, utiliser /tmp pour l'écriture, sinon utiliser __dirname
