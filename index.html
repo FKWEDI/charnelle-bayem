@@ -27,12 +27,31 @@
 <div class="audio-player-container">
     <div class="audio-player">
         <h3>🎵 Musique</h3>
-        <audio controls>
+
+        <!-- Lecteur audio principal -->
+        <audio id="audio1" controls>
             <source src="jesus.mp3" type="audio/mpeg">
             Votre navigateur ne supporte pas la lecture audio.
         </audio>
+
+        <!-- Audio invisible qui jouera ensuite -->
+        <audio id="audio2" style="display: none;">
+            <source src="vanite.mp3" type="audio/mpeg">
+        </audio>
     </div>
 </div>
+
+<script>
+    // Récupération des audios
+    const audio1 = document.getElementById("audio1");
+    const audio2 = document.getElementById("audio2");
+
+    // Quand audio1 se termine → lancer audio2
+    audio1.addEventListener("ended", function() {
+        audio2.play();
+    });
+</script>
+
 
 <section id="accueil" class="section">
     <h1>Il était une fois...</h1>
@@ -215,11 +234,11 @@ Nous t’aimons<br>
     <strong>—Ta tante Mano—</strong></p><br> <br> 
 
     <p>A Char,<br>
-        Des dernières heures feront à jamais partie des plus troublantes de ma vie.<br> 
-        Tu as fait des réalisations et jamais tu n'en profiteras,<br> 
-        Nous étions prètes à tout ce qui était possible avec maman ce jour pour soulager tes peines mais nous nous sommes senties impuissantes.<br>
-        Tu nous a laissées croire la veille que ça irait mieux le lendemain. Tu nous as détourné notre vigilence.<br> 
-        Tu n'entreras pas dans la maison que tu as laissée sur cette terrecertes, mais j'espère que là haut, tu en auras une meilleure.<br>
+        Tes dernières heures feront à jamais partie des plus troublantes de ma vie.<br> 
+        Tu as fait des réalisations et jamais tu n'en profiteras.<br> 
+        Nous étions prètes à tout ce qui était possible avec maman ce jour à l'hôpital pour soulager tes peines mais nous nous sommes senties si impuissantes.<br>
+        Tu nous a laissées croire la veille que ça irait mieux le lendemain. Tu as détourné notre vigilence.<br> 
+        Tu n'entreras pas dans la maison que tu as laissée sur cette terre. J'espère que là haut, tu en auras une meilleure.<br>
         S'il ya du repos de l'autre côté ma petite, j'espère qu'il sera ton partage et que tu seras apaisée.<br>
         Repose en paix, ma fille.<br>
     
@@ -557,52 +576,119 @@ Nous t’aimons<br>
 
     </section>
 
-    <section id="Un mot pour toi" class="section">
+    <section id="un-mot-pour-toi" class="section message-spirituel">
         <h1>Un mot pour toi qui es encore en vie</h1>
-        <p style="text-align: justify;">Une pensée pour tous ceux qui nous ont déjà devancés...<br>  
+    
+        <p>
+            Une pensée pour tous ceux qui nous ont déjà devancés…<br><br>
+    
+            Ils étaient là au milieu de nous et avec nous.<br>
+            Mais un jour ils sont partis sans le vouloir forcément.<br>
+            Leur départ nous a rappelé que nous ne sommes pas éternels sur cette terre,<br>
+            qu'un jour nous aussi, nous nous en irons certainement.<br><br>
+    
+            Leur départ nous a rappelé ces déclarations de Jésus :
+        </p>
+    
+        <blockquote>
+            « Et que servirait-il à un homme de gagner tout le monde, s'il se détruisait ou se perdait lui-même ? »  
+            <span class="reference">Luc 9:25</span>
+        </blockquote>
+    
+        <p>
+            C’est dans des moments comme ceux-ci que tu entends cette voix te dire dans ton cœur :
+        </p>
+    
+        <blockquote class="simple">
+            « En vérité, la vie ci n’est rien. Tout est vanité. »
+        </blockquote>
+    
+        <p>
+            Alors pourquoi refuses-tu de renoncer à toi-même et aux plaisirs de ce monde  
+            pour retourner vers ton Créateur ?<br>
+            <strong>A quoi ne voudrais-tu pas renoncer ?</strong><br>
+            Une relation ? un job ? les faveurs de certaines personnes ?<br>
+            <strong>De quoi et de qui as-tu peur ?</strong><br>
+            Ta famille ? ta tradition ? ta religion ? tes rêves ? tes ambitions ? ton honneur ?<br>
+            <strong>Peu importe ce que c'est, ça ne vaut pas ton âme.</strong>
+        </p>
+    
+        <p>
+            Pourquoi remets-tu à plus tard cette décision que tu sais être la bonne :  
+            <strong>Suivre Jésus</strong> ?
+        </p>
+    
+        <p>
+            <strong>De toute façon, toutes ces choses qui te retiennent, un jour, tu les laisseras ; toutes !</strong><br>
+            Tu perdras donc non seulement ces choses, mais aussi ton âme.
+        </p>
+    
+        <blockquote>
+            « Car celui qui voudra sauver sa vie la perdra ; mais celui qui la perdra à cause de moi la sauvera. »  
+            <span class="reference">Luc 9:24</span>
+        </blockquote>
+    
+        <p>
+            Crois en Jésus tant qu’il est temps. Il t’aime et veut te sauver.<br>
+            Tes péchés ne te conduiront qu’en enfer.<br>
+            Ne te crois pas juste à tes yeux parce que tu n’as pas commis tel type de péché.<br>
+            Ne te retiens pas à cause de la vie de ceux qui disent être chrétiens autour de toi :<br>
+            Dieu te jugera toi, seul, selon sa Parole.<br><br>
+    
+            Il est écrit dans Romains 3:23-24 :
+        </p>
+    
+        <blockquote>
+            « Car tous ont péché et sont privés de la gloire de Dieu ;  
+            et ils sont gratuitement justifiés par sa grâce,  
+            par le moyen de la rédemption qui est en Jésus-Christ. »
+        </blockquote>
+    
+        <p>
+            Peu importe combien tu te sens sale ou indigne,  
+            Jésus frappe à la porte de ton cœur pendant que tu lis ce texte.<br><br>
+    
+            <strong>Accepter l’amour de Jésus-Christ est le meilleur choix que tu puisses faire.</strong><br>
+            <strong>Une fois parti de ce monde, il sera trop tard.</strong><br><br>
+    
+            <strong>Que Dieu te bénisse.</strong>
+        </p>
+    </section>
 
-Ils étaient là au milieu de nous et avec nous<br>  
-Mais un jour ils sont partis sans le vouloir forcément.<br> 
-Leur départ nous a rappelé que nous ne sommes pas éternels sur cette terre<br> 
-Qu'un jour nous aussi, nous nous en irons certainement.<br>
-Leur départ nous a rappelé ces déclarations de Jésus :<br> 
-
- <em>"Et que servirait-il a un homme de gagner tout le monde, s'il se detruisait ou se perdait lui-même?" Luc 9:25</em><br> 
-C’est dans des moments comme ceux-ci que tu écoutes cette voix te dire dans ton cœur :<br> 
-"En vérité, la vie ci n'est rien. Tout est vanité".<br> <br> 
-
- Alors Pourquoi refuses-tu de renoncer à toi-même et aux plaisirs de ce monde pour retourner vers ton Créateur ?<br>
-<strong>A quoi ne voudrais-tu pas renoncer ?</strong><br>
- Une relation ? un job ? les faveurs de certaines personnes ?<br> 
-<strong>De quoi et de qui as-tu peur ?</strong><br> 
-Ta famille ? ta tradition ? ta religion ou une façon de penser héritée ? un engagement ? tes rêves ? Tes ambitions ? Ton honneur ?
-<strong>Peu importe ce que c'est, ça ne vaut pas ton âme.</strong><br> <br> 
-
-Pourquoi remets-tu à plus tard cette décision que tu sais être la bonne "Suivre Jésus" ?
- 
-
-<strong>De toute façon, ces choses qui te retiennent, un jour, sur cette terre, tu les laisseras ; toutes !</strong><br> 
-Tu perdras donc non seulement ces choses, mais aussi ton âme.<br> <br> 
-
-C'est pourquoi la bible dit :
- <em>"Car celui qui voudra sauver sa vie la perdra, mais celui qui la perdra a cause de moi la sauvera."</em> Luc 9:24<br> 
-
- Crois en Jésus tant qu’il est temps. Il t'aime et veut te sauver.<br> 
- Tes péchés ne te conduiront qu’en enfer.<br>   
- Ne te crois pas juste à tes yeux parceque tu n’as pas commis tel type de péché.<br>
- Ne te retiens pas de prendre cette décision en tenant compte des agissements de ceux qui disent être chretiens autour de toi<br>
- Dieu te jugera toi, tout seul, sur la base de sa Parole sans tenir compte de la vie des autres<br>  
- Il est écrit dans Romains 3:23-24  <em>« Car tous ont péché et sont privés de la gloire de Dieu ;
-et ils sont gratuitement justifiés par sa grâce, par le moyen de la rédemption qui est en Jésus-Christ.»</em>
-
-Peu importe combien tu te sens sale et indigne, Jésus frappe à la porte de ton coeur pendant que tu lis ce texte<br><br> 
-
-<strong>Accepter l’amour de Jesus-Christ est le meilleur choix que tu puisses faire de ton vivant.</strong><br> 
-
-<strong>Une fois parti de ce monde, il se fera trop tard.</strong><br> <br> 
-
-<strong>Que Dieu te bénisse.</strong></p>
+    <section id="souvenirs" class="section souvenirs">
+        <h1>Souvenirs</h1>
+        <p class="intro">
+            Quelques moments précieux que nous gardons dans nos cœurs…
+        </p>
+    
+        <!-- Bouton pour vid.mp4 -->
+        <button class="btn-video" onclick="document.getElementById('player-vid').style.display='block'">
+            🎞️ Voir la première vidéo
+        </button>
+    
+        <!-- Player pour vid.mp4 masqué au départ -->
+        <div id="player-vid" class="video-container" style="display: none;">
+            <video controls width="480" height="270">
+                <source src="vid.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+    
+        <!-- Bouton pour video.mp4 -->
+        <button class="btn-video" onclick="document.getElementById('player-video').style.display='block'">
+            🎞️ Voir la deuxième vidéo
+        </button>
+    
+        <!-- Player pour video.mp4 masqué au départ -->
+        <div id="player-video" class="video-container" style="display: none;">
+            <video controls width="480" height="270">
+                <source src="video.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la
+    
+        
 </section>
+
+    
 
 <!-- JavaScript intégré -->
 <script>
