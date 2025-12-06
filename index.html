@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+function toggleAccordion(button) {
+    const item = button.closest('.accordion-item');
+    item.classList.toggle("active");
+}
+
+/* Transition douce pour les vidéos */
+function showVideo(id) {
+    const container = document.getElementById(id);
+    container.classList.add("visible");
+}
+</script>
+
 <body>
 
 <nav>
@@ -125,129 +138,186 @@
         <strong><li>📌 Jeudi 04/12/2025 :</li> </strong>
             <ol>Veillée sans corps au domicile de la défunte au Génie militaire</ol>
        <strong><li>📌 Vendredi 05/12/2025 :</li></strong> 
-            <ol>Levée de corps à l'hôpital de la cité des palmiers</ol>
-            <ol>Veillée avec corps jusqu'à l'aube au domicile des parents à PK13 - entrée Sodikombo (face école publique de Sodikombo)</ol>
+            <ol>11H : Levée de corps à l'hôpital de la cité des palmiers</ol>
+            <ol>20H : Veillée avec corps jusqu'à l'aube au domicile des parents à PK13 - entrée Sodikombo (face école publique de Sodikombo)</ol>
         <strong><li>📌 Samedi 06/12/2025</li></strong>
-            <ol>Inhumation dans la stricte intimité familliale</ol>
-            <ol>Collation</ol>
+            <ol>09H : Inhumation dans la stricte intimité familliale</ol>
+            <ol>12H : Collation</ol>
             <ol>Mot de fin et remerciements de la famille</ol>
-            <ol>Fin des cérémonies</ol>
+            <ol>14H : Fin des cérémonies</ol>
     </ul>
 </section>
 
-<section id="adieux💔 " class="section">
+<section id="adieux" class="section">
     <h1>Adieux et messages</h1>
-        <h3>Témoignages</h3><br> 
-        <p>Ma petite...<br> 
-            Nos chemins ont été différents au fil des années<br> 
-            Mais notre lien<br> 
-            Notre amour...<br> 
-            Lui, restera éternel.<br>
-            <strong>— Ton grand-frère— </strong></p>
-           
-            <p>Mon bébé,<br>
-                C’est avec un cœur lourd que je te dis au revoir.<br> 
-                Pendant toutes ces années de maladie, j’ai été à tes côtés autant que j’ai pu,<br>
-                et chaque instant passé près de toi a laissé une marque profonde en moi.<br> 
-                Tu as affronté tout cela avec une force qui m’a bouleversée, et une douceur qui m’accompagnera toujours.<br>
-                Tu as illuminé ma vie, même dans les moments les plus difficiles.<br> 
-                Tes regards, tes mots, ta façon d’être, tout cela reste vivant en moi et Rien ne pourra effacer l’amour immense que j’ai pour toi.<br>
-                Aujourd’hui, même si ton absence est douloureuse, je veux te savoir enfin en paix, libérée de la souffrance.<br>
-                Si ça dépendait de moi, je ne t'aurais jamais laissée partir<br>
-                J'aurais souhaité que tu sois là pour faire grandir tes enfants que tu aimais tant.<br> 
-                Je garderai ton souvenir comme un trésor, et tu resteras pour toujours une partie de moi.<br>
-                
-                Repose en paix, mon enfant. Je t’aime infiniment.<br>
-                <strong>— Maman— </strong></p><br>    
-    <p>
-        “Ma soeur bien aimée,<br>
-        Durant toute ta vie tu as été à la fois une confidente et amie pour moi.<br>
-        Tu as toujours répondu présente peu importe les circonstances.<br>
-        Tu m’as aimée de tout ton cœur et ton départ reste très troublant..<br>
-        Tu laisses un grand vide dans nos vies que personne ne pourra combler…<br>
-        Tu as combattu dans la maladie, tu as souffert au point de perdre goût à la vie<br>
-        Mais le seigneur a su comment apaiser tes douleurs en te rappelant auprès de lui.<br><br>
-        Sache que je ne t’oublierai jamais ma petite soeur !<br>
-        Que ton âme repose en paix.”<br>
-    <strong>— Ta grande sœur— </strong></p><br><br>
+    <h3>Témoignages</h3><br>
 
-    <p>
-        “Ma chère grande sœur,<br>
-        Ton absence laisse un vide immense en moi.<br> 
-        Nous étions si liées, et tout ce que nous avons partagé continue de vivre en moi :<br> 
-        nos rires, nos confidences,ta présence rassurante…<br> 
-        Merci pour ton amour.<br>
-        Aujourd’hui, même si mon cœur peine à te laisser partir, je sais que tu veilles sur moi.<br>
-        Tu es restée forte malgré tes souffrances. Que le Seigneur t'accorde le repos éternel<br> 
-        Et que sa lumière sans fin brille sur toi.“<br>
-    <strong>— Ta petite sœur chérie—</strong></p><br><br>
+    <div class="accordion-container">
 
-    <p>“Je ferme les yeux et tout me revient :<br> 
-        Moi entrain de me servir dans ta garde-robe depuis petites<br>  
-        tellement on avait la même corpulence et le même style vestimentaire,<br> 
-        Je garde comme souvenir de toi la simplicité challengeante dont tu as toujours su faire preuve<br> 
-        Ton doux silence plus parlant que les mots savait rassurer.<br> 
-        Il ya peu de temps, malgré ta douleur, tu as pu trouver les mots justes certes peu mais suffisants pour me consoler et m'encourager.<br> 
-        Char… C'est un exercice assez difficile auquel tu me soumets que de devoir rédiger un adieu pour la première fois<br>
-        j’aurais tellement voulu te parler ce 05/11/2025. Juste une dernière fois pour te dire que <strong>Jésus t’aime et veut te sauver.</strong><br> 
-        Mais Dieu ne l'a pas permis dans sa Souveraineté.<br> 
-       A notre famille, je le dirai désormais en pensant à toi.<br> 
-        Adieu sist” <br>
-        <strong>—(Liii)—</strong></p><br> <br> 
+        <!-- GRAND FRÈRE -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Message du grand-frère</span>
+                <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    Ma petite…<br><br>
+                    Nos chemins ont été différents au fil des années…<br>
+                    Mais notre lien, notre amour… lui restera éternel.<br><br>
+                    Tu seras toujours dans mon cœur.<br>
+                    <strong>— Ton grand-frère —</strong>
+                </p>
+            </div>
+        </div>
 
+        <!-- MAMAN -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Maman</span>
+                <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    Mon bébé…<br><br>
+                    Pendant toutes ces années de maladie, j’ai été à tes côtés,
+                    te tenant la main, te portant dans la prière, espérant toujours
+                    un miracle qui te soulagerait.<br><br>
+                    Aujourd’hui tu reposes enfin, loin de la douleur.  
+                    Je t’aimerai pour toujours.<br>
+                    <strong>— Maman —</strong>
+                </p>
+            </div>
+        </div>
 
-       <p>Chère sœur de cœur,<br> 
-Tu as toujours été plus qu’une simple cousine :<br> 
-tu étais une guide, un repère,<br> 
-celle qui veillait sur nous avec tendresse et fermeté.<br> 
-Ton sourire éclairait nos réunions de famille,<br> 
-tes conseils nous ont formés et encouragés,<br> 
-et ton amour restera gravé au plus profond de nos vies.<br> 
-Aujourd’hui, nos cœurs sont lourds,<br> 
-mais nous gardons de toi la force, la bonté et la joie que tu nous as offertes.<br> 
+        <!-- GRANDE SŒUR -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Message de la grande sœur</span>
+                <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    Ma sœur bien-aimée…<br><br>
+                    Durant toute ta vie, tu as été à la fois une confidente et une amie,
+                    ton sourire apportait une lumière unique dans nos vies.<br><br>
+                    Je t’aime pour toujours.<br>
+                    <strong>— Ta grande sœur —</strong>
+                </p>
+            </div>
+        </div>
 
-Tu n’es plus là où tu étais…<br> 
-mais tu es partout où nous serons.<br> 
-Dans nos souvenirs, dans nos pas, dans nos vies.<br> 
-Repose en paix, grande sœur.<br> 
-Du fond de nos cœurs, nous t’aimerons toujours.<br>
-<strong>—Tes cousins et cousines—</strong><br><br>
-        
-        
-     <p>Tata Charnelle,<br>
-Tu étais la tendresse dans nos journées,<br>
-le rire dans nos jeux,<br>
-et la présence qui réconfortait nos petits cœurs.<br>
-Tes câlins, tes cadeaux et nos sorties pour le glacier et le manège nous manquent déjà<br>
-Au revoir, Tata Charnelle…<br>
-Nous t’aimons<br>
-  <strong>—Tes neveux et nièces—</strong></p>
+        <!-- PETITE SŒUR -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Message de la petite sœur</span>
+                <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    Ma chère grande sœur…<br><br>
+                    Ton absence laisse un vide immense dans mon cœur.
+                    Tu m’as appris la force, la douceur et l’amour sincère.<br><br>
+                    Tu resteras mon modèle à jamais.<br>
+                    <strong>— Ta petite sœur chérie —</strong>
+                </p>
+            </div>
+        </div>
 
-  <p>Ma chérie,<br>
-    Je te dis au revoir avec tout mon cœur.<br> 
-    Je t’ai vue grandir, je t’ai accompagnée autant que je le pouvais,<br> 
-    et même si la vie avait mis un peu de distance entre nous, mon affection pour toi n’a jamais changé.<br>
-    Ton départ me peine profondément, mais je garde précieusement les moments que nous avons partagés.<<br> 
-    Tu as compté pour moi plus que tu ne l’imaginais.<br>
-    Repose en paix, ma fille Tu resteras toujours dans mon cœur.<br>
+        <!-- LIII -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Liii</span>
+                <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    Je ferme les yeux et tout me revient…<br><br>
+                    Ton rire, ta voix, tes gestes, ta façon d’être unique.  
+                    Rien ne pourra effacer ce que tu représentais pour moi.<br><br>
+                    Merci pour ton amour.<br>
+                    <strong>— Liii —</strong>
+                </p>
+            </div>
+        </div>
 
-    <strong>—Ta tante Mano—</strong></p><br> <br> 
+        <!-- COUSINS & COUSINES -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Cousins & cousines</span>
+                <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    Chère sœur de cœur…<br><br>
+                    Tu as toujours été plus qu’une simple cousine pour nous :
+                    une amie, un repère, un rayon de soleil.<br><br>
+                    Nous te portons dans nos prières et dans nos cœurs.<br>
+                    <strong>— Tes cousins et cousines —</strong>
+                </p>
+            </div>
+        </div>
 
-    <p>A Char,<br>
-        Tes dernières heures feront à jamais partie des plus troublantes de ma vie.<br> 
-        Tu as fait des réalisations et jamais tu n'en profiteras.<br> 
-        Nous étions prètes à tout ce qui était possible avec maman ce jour à l'hôpital pour soulager tes peines mais nous nous sommes senties si impuissantes.<br>
-        Tu nous a laissées croire la veille que ça irait mieux le lendemain. Tu as détourné notre vigilence.<br> 
-        Tu n'entreras pas dans la maison que tu as laissée sur cette terre. J'espère que là haut, tu en auras une meilleure.<br>
-        S'il ya du repos de l'autre côté ma petite, j'espère qu'il sera ton partage et que tu seras apaisée.<br>
-        Repose en paix, ma fille.<br>
-    
-        <strong>—Tantine Técky—</strong></p><br>
+        <!-- NEVEUX & NIECES -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Neveux & nièces</span>
+                <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    Tata Charnelle…<br><br>
+                    Tu étais la tendresse dans nos journées, la douceur de nos câlins,
+                    la chaleur de nos rires.<br><br>
+                    Même si tu n’es plus là, ton amour continue de nous protéger.<br>
+                    <strong>— Tes neveux et nièces —</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- TANTE MANO -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Tante Mano</span>
+                <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    Ma chérie…<br><br>
+                    Je te dis au revoir avec tout mon cœur serré.
+                    Tu étais comme ma propre fille.  
+                    Ton départ laisse un silence que rien n’effacera.<br><br>
+                    Repose en paix.<br>
+                    <strong>— Ta tante Mano —</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- TANTINE TECKY -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+                <span>Tantine Técky</span>
+                <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    À Char…<br><br>
+                    Tes dernières heures feront à jamais partie des plus troublantes
+                    que j’aie vécues, mais aussi des plus empreintes de courage.<br><br>
+                    Tu t’es battue avec force et dignité jusqu’au bout.<br>
+                    <strong>— Tantine Técky —</strong>
+                </p>
+            </div>
+        </div>
+
+    </div>
 
     <textarea id="message" rows="4" placeholder="Votre message d’adieu..."></textarea>
     <button onclick="ajouterMessage()">Envoyer</button>
     <div id="messages"></div>
 </section>
+
+
 
 <section id="fleurs" class="section">
     <h1>Offrir une fleur 🥀</h1>
@@ -657,33 +727,31 @@ Nous t’aimons<br>
 
     <section id="souvenirs" class="section souvenirs">
         <h1>Souvenirs</h1>
-        <p class="intro">
-            Quelques moments précieux que nous gardons dans nos cœurs…
-        </p>
+        <p class="intro">Quelques moments précieux que nous gardons dans nos cœurs…</p>
     
-        <!-- Bouton pour vid.mp4 -->
-        <button class="btn-video" onclick="document.getElementById('player-vid').style.display='block'">
+        <!-- Vidéo 1 -->
+        <button class="btn-video" onclick="showVideo('video1')">
             🎞️ Voir la première vidéo
         </button>
     
-        <!-- Player pour vid.mp4 masqué au départ -->
-        <div id="player-vid" class="video-container" style="display: none;">
+        <div id="video1" class="video-container">
             <video controls width="480" height="270">
-                <source src="vid.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo.
+                <source src="https://charnelle.s3.us-west-2.amazonaws.com/Video-1.mp4" type="video/mp4">
             </video>
         </div>
     
-        <!-- Bouton pour video.mp4 -->
-        <button class="btn-video" onclick="document.getElementById('player-video').style.display='block'">
+        <!-- Vidéo 2 -->
+        <button class="btn-video" onclick="showVideo('video2')">
             🎞️ Voir la deuxième vidéo
         </button>
     
-        <!-- Player pour video.mp4 masqué au départ -->
-        <div id="player-video" class="video-container" style="display: none;">
+        <div id="video2" class="video-container">
             <video controls width="480" height="270">
-                <source src="video.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la
+                <source src="https://charnelle.s3.us-west-2.amazonaws.com/Video-2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    
     
         
 </section>
@@ -808,6 +876,18 @@ function toggleAccordion(button) {
 }
 
 </script>
-
+<script>
+    function toggleAccordion(button) {
+        const item = button.closest('.accordion-item');
+        item.classList.toggle("active");
+    }
+    
+    /* Transition douce pour les vidéos */
+    function showVideo(id) {
+        const container = document.getElementById(id);
+        container.classList.add("visible");
+    }
+    </script>
+    
 </body>
 </html>

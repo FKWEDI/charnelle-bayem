@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #F9C8B7;
+    color: #4C312D;
+    scroll-behavior: smooth;
+}
+
+nav {
+    text-align: center;
+    background-color: rgba(0,0,0,0.08);
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(6px);
+}
+
+nav a {
+    margin: 0 14px;
+    text-decoration: none;
+    color: #4C312D;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.section {
+    padding: 45px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.photo {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 0 25px rgba(0,0,0,0.25);
+}
+
+button {
+    background-color: #4C312D;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #6e4a45;
+}
+
+/* Bougies */
+.candle {
+    width: 65px;
+    margin: 10px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 6px;
+    padding: 12px;
+    border: 1px solid #A37C78;
+}
+
+/* ================================================
+   THÈME ROSE - BEIGE ÉLÉGANT
+   ================================================ */
+:root {
+    --rose: #f7dfe8;
+    --rose-clair: #fdeff4;
+    --rose-pale: #fff7fa;
+    --beige: #f4ece6;
+    --beige-clair: #fbf6f2;
+    --texte: #5a4a4a;
+}
+
+/* ---- Typographies élégantes ---- */
+body, p, li {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    color: var(--texte);
+    background-color: var(--beige-clair);
+    line-height: 1.75;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #8a4f63;
+}
+
+/* ================================================
+   ACCORDÉON
+   ================================================ */
+.accordion-container {
+    max-width: 880px;
+    margin: 20px auto;
+}
+
+.accordion-item {
+    background: var(--rose-pale);
+    border-radius: 10px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    border: 1px solid #e5c9d2;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 16px 22px;
+    font-size: 19px;
+    font-family: 'Playfair Display', serif;
+    background: var(--rose);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #7a4355;
+    transition: background 0.3s;
+}
+
+.accordion-header:hover {
+    background: var(--rose-clair);
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* ---- Effet de GLISSEMENT ---- */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: var(--rose-pale);
+    padding: 0 22px;
+    transition: max-height 0.45s ease, padding 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 700px;
+    padding: 20px 22px;
+}
+
+/* ================================================
+   VIDÉOS AVEC TRANSITION EN DOUCEUR
+   ================================================ */
+.video-container {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: scale(0.98);
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.video-container.visible {
+    opacity: 1;
+    max-height: 900px;
+    transform: scale(1);
+}
+
+/* Bouton vidéo */
+.btn-video {
+    background: var(--rose);
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 0;
+    color: #7a4355;
+    font-family: 'Playfair Display';
+    transition: background 0.3s ease;
+}
+
+.btn-video:hover {
+    background: var(--rose-clair);
+}
+
+
